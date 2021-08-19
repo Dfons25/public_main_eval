@@ -45,36 +45,53 @@ int main()
 	{
 	case 0:
 	{
-		char *destino_0 = malloc(100 * sizeof(char));
-		char *teste_0 = "                 MAL!!! ";
-		char *frase_0 = "FEZ O EXERCICIO ";
 
-		printf("******************** EX00 ft_strcpy ***************************************\n\n ");
-		printf("Copiando uma string: a função strcpy \n \n");
-		printf(" Para armazenar uma string literal numa variável string \n");
-		printf(" - ou copiar o conteúdo de uma variável string para outra -\n");
-		printf(" você usa a função strcpy. \n \n");
-		printf("Sintaxe: strcpy (variável, string); \n \n");
-		ft_strcpy(destino_0, teste_0);
-		ft_strcpy(destino_0, frase_0);
-		printf("%s", destino_0);
-		printf("\n\n\n **************************************************************************\n\n\n");
-		free(destino_0);
+		char src2[40];
+		char dest2[100];
+		
+		printf("original\n");
+		memset(dest2, '\0', sizeof(dest));
+		strcpy(src2, "This is tutorialspoint.com");
+		strcpy(dest2, src2);
+
+		printf("Final copied string : %s\n", dest2);
+
+
+		char src[40];
+		char dest[100];
+		
+		printf("c02\n");
+		memset(dest, '\0', sizeof(dest));
+		ft_strcpy(src, "This is tutorialspoint.com");
+		ft_strcpy(dest, src);
+
+		printf("Final copied string : %s\n", dest);
+
 		break;
 	}
 	case 1:
 	{
 		printf("********************EX01 ft_strncpy *******************************************\n\n ");
-		printf("Copiando uma string : a função strncpy \n ");
-		printf("strncpy(string_destino, string_origem, tamanho);\n\n");
-		printf("Realiza a cópia do conteúdo de uma variável string a outra, porém,\n");
-		printf("deve ser especificado o tamanho (n) a ser copiado.\n");
-		char *src_1 = "O exercicio esta Certo!!!!!!!!!";
-		char *dst_1 = malloc(sizeof(char) * 50);
-		dst_1 = ft_strncpy(dst_1, src_1, 30);
-		printf("\n\n %s \n\n", dst_1);
-		printf("*******************************************************************\n\n\n");
-		free(dst_1);
+
+		char src[40];
+   		char dest[12];
+		
+		printf("original\n");
+		memset(dest, '\0', sizeof(dest));
+		strcpy(src, "This is tutorialspoint.com");
+		strncpy(dest, src, 10);
+
+		printf("Final copied string : %s\n", dest);
+
+		char src2[40];
+		char dest2[12];
+		
+		printf("c02\n");
+		memset(dest2, '\0', sizeof(dest2));
+		strcpy(src2, "This is tutorialspoint.com");
+		ft_strncpy(dest2, src2, 10);
+
+		printf("Final copied string : %s\n", dest2);
 		break;
 	}
 	case 2:
