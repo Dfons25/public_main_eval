@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include <string.h>
 
 #include "ex00/ft_strlen.c"
@@ -32,91 +34,26 @@ int main()
 	{
 	case 0:
 	{
-	
-	printf("\n#### Ex 00 ####\n");
-	
-	char a[20]="Program";
-    char b[20]={'P','r','o','g','r','a','m','\0'};
-
-		// using the %zu format specifier to print size_t
-		printf("Original strlen\n");
-		printf("Length of string a = %d \n",strlen(a));
-		printf("Length of string b = %d \n",strlen(b));
-
-		printf("\n--------------------------\n");
-		printf("C04 strlen\n");
-		printf("Length of string a = %d \n",ft_strlen(a));
-		printf("Length of string b = %d \n",ft_strlen(b));
-
+		printf("%d", strlen("test"));
+		printf("%d", ft_strlen("test"));
 		break;
 	}
 	case 1:
 	{
-		printf("\n#### Ex 01 ####\n");
-
-		printf("abcdefghijkABCDE123/*-()=?`'");
-		printf("\n");
-		ft_putstr("abcdefghijkABCDE123/*-()=?`'");
+		printf("test");
+		ft_putstr("test");
 		break;
 	}
 	case 2:
 	{
-		int n1, n2, n3;
-		n1 = INT_MIN;
-		n2 = INT_MAX;
-		n3 = 0;
-
-		printf("\n#### Ex 02 ####\n");
-
-		printf("INT MIN %d \n", n1);
-		printf("ft_putnbr :\n");
-		ft_putnbr(n1);
-		printf("\n");
-
-		printf("INT MAX %d :\n", n2);
-		printf("ft_putnbr :\n");
-		ft_putnbr(n2);
-		printf("\n");
-
-		printf("NULL %d :\n", n3);
-		printf("ft_putnbr :\n");
-		ft_putnbr(n3);
-		printf("\n");
-
+		printf("%d", 123);
+		ft_putnbr(123);
 		break;
 	}
 	case 3:
 	{
-		int val;
-		char str[20];
-		
-		printf("\n#### Ex 03 ####\n");
-
-		printf("Original atoi\n");
-		strcpy(str, "98993489");
-		val = atoi(str);
-		printf("String value = %s, Int value = %d\n", str, val);
-
-		strcpy(str, "tutorialspoint.com");
-		val = atoi(str);
-		printf("String value = %s, Int value = %d\n", str, val);
-
-		printf("\n--------------------------\n");
-		printf("C04 atoi\n");
-		
-		int val_1;
-		char str_1[20];
-		
-		strcpy(str_1, "98993489");
-		val_1 = ft_atoi(str_1);
-		printf("String value = %s, Int value = %d\n", str_1, val_1);
-
-		strcpy(str_1, "tutorialspoint.com");
-		val_1 = ft_atoi(str_1);
-		printf("String value = %s, Int value = %d\n", str_1, val_1);
-
-		printf("\n--------------------------\n");
-
+		printf("%d\n", ft_atoi(" ---+--+1234ab567"));
+		printf("%d\n", atoi(" -123as"));
 		break;
 	}
 	case 4:
